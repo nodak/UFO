@@ -33,8 +33,8 @@ public class MainActivity extends FragmentActivity implements LocationListener {
 	private void setUpMapIfNeeded() {
 		if ( null == googleMap ) {
 			googleMap = ( ( SupportMapFragment ) getSupportFragmentManager()
-			.findFragmentById( R.id.map ) )
-			.getMap();
+								.findFragmentById( R.id.map ) )
+								.getMap();
 			if  ( null != googleMap ) {
 				setUpMap();
 			}
@@ -54,8 +54,8 @@ public class MainActivity extends FragmentActivity implements LocationListener {
 		}
 		setMapType();
 		googleMap.addMarker( new MarkerOptions()
-		.position( new LatLng( latitude, longitude ) )
-		.title( "I'm" ) );
+					.position( new LatLng( latitude, longitude ) )
+					.title( "I'm" ) );
 	}
 	
 	public void onLocationChanged( Location location ) {
@@ -88,7 +88,7 @@ public class MainActivity extends FragmentActivity implements LocationListener {
 			finish();
 		} else {
 			Toast.makeText( getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT )
-			.show();
+													.show();
 			back_pressed = System.currentTimeMillis();
 		}
 	}
